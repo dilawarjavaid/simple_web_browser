@@ -15,5 +15,14 @@ class Browser(QMainWindow):
         self.address_bar = QLineEdit()
         self.address_bar.setPlaceholderText("Enter URL and press Enter")
         self.address_bar.returnPressed.connect(self.load_url_from_address_bar)
+        # Layout to hold the address bar and the browser view
+        layout = QVBoxLayout()
+        layout.addWidget(self.address_bar)
+        layout.addWidget(self.browser)
+
+        container = QWidget()
+        container.setLayout(layout)
+        self.setCentralWidget(container)
+
 
 
