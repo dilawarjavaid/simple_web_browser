@@ -31,5 +31,12 @@ class Browser(QMainWindow):
         self.setGeometry(300, 300, 800, 600)
         self.setWindowTitle('Simple Web Browser')
 
+    def load_url_from_address_bar(self):
+        url = QUrl(self.address_bar.text())
+        if url.scheme() == "":
+            url.setScheme("http")
+        self.browser.setUrl(url)
+
+
 
 
