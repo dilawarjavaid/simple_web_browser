@@ -38,5 +38,16 @@ class Browser(QMainWindow):
         self.browser.setUrl(url)
 
 
+def main():
+    app = QApplication(sys.argv)
+    window = Browser()
+    window.show()
+    sys.exit(app.exec())
+
+if __name__ == "__main__":
+    main()
+
+
+
 
 
