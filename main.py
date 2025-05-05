@@ -8,3 +8,7 @@ from PyQt6.QtCore import QUrl
 class Browser(QMainWindow):
     def __init__(self):
         super().__init__()
+        #Add the Web View
+        self.browser = QWebEngineView()
+        self.browser.setUrl(QUrl("https://www.google.com"))
+
