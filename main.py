@@ -11,4 +11,9 @@ class Browser(QMainWindow):
         #Add the Web View
         self.browser = QWebEngineView()
         self.browser.setUrl(QUrl("https://www.google.com"))
+        # Create Address Bar
+        self.address_bar = QLineEdit()
+        self.address_bar.setPlaceholderText("Enter URL and press Enter")
+        self.address_bar.returnPressed.connect(self.load_url_from_address_bar)
+
 
